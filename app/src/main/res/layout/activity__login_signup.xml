@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity_LoginSignup">
+
+
+    <LinearLayout
+        android:id="@+id/activity_login_userinput_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_login_usertype" />
+
+            <Spinner
+                android:id="@+id/activity_login_usertype"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:entries="@array/activity_login_usertype" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/login_activity_saloonname"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/activity_login_saloonname" />
+
+        <EditText
+            android:id="@+id/login_activity_username"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/activity_login_username" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/activity_login_password"
+            android:id="@+id/activity_login_password"
+            android:inputType="textPassword" />
+
+
+    </LinearLayout>
+
+
+
+
+
+        <Button
+            android:id="@+id/activity_login_signup_button"
+            android:layout_width="wrap_content"
+            android:text="@string/activity_login_sign_up"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/activity_login_userinput_layout"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/activity_login_signup_button"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:id="@+id/activity_login_prompt"
+            android:text="@string/activity_login_sign_in_prompt"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/activity_login_signin_text"
+            android:textColor="@color/colorPrimary"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:gravity="center"
+            android:text="@string/activity_login_sign_in"/>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
