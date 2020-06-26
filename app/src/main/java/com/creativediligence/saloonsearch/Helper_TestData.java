@@ -20,6 +20,7 @@ public class Helper_TestData {
     static ArrayList<String> tabtitlesHomepage=new ArrayList<>(Arrays.asList("Discover","Appointments","My Saloons"));
     static ArrayList<String> tabtitlesSaloonDetails=new ArrayList<>(Arrays.asList("Services","Calendar","Reviews"));
     static ArrayList<Integer> tabImagesHomepage =new ArrayList<>(Arrays.asList(R.drawable.ic_search_small,R.drawable.ic_appointments,R.drawable.ic_mysaloons));
+    static ArrayList<String> saloonServices=new ArrayList<>(Arrays.asList("Washing","Conditioning","Natural Hair Services","ETC"));
 
 
 

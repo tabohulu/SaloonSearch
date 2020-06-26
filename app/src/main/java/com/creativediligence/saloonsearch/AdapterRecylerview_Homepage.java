@@ -2,6 +2,7 @@ package com.creativediligence.saloonsearch;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class AdapterRecylerview_Homepage extends RecyclerView.Adapter<AdapterRecylerview_Homepage.MyViewHolder> {
 
@@ -36,14 +38,21 @@ public class AdapterRecylerview_Homepage extends RecyclerView.Adapter<AdapterRec
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         holder.saloonName.setText("Name: " + hitListData.get(position).getSaloonName());
         holder.saloonLocation.setText("Location: " + hitListData.get(position).getSalonLocation());
         holder.saloonRating.setText("Rating: " + hitListData.get(position).getSaloonRating());
         holder.mainLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Bundle args=new Bundle();
+                args.putStringArrayList("extras",new ArrayList<String>(Arrays.asList(
+                        hitListData.get(position).getSaloonName(),
+                        hitListData.get(position).getSalonLocation(),
+                        hitListData.get(position).getSaloonRating())));
                 Intent intent = new Intent(mContext, Activity_SaloonDetails.class);
+                intent.putExtras(args);
+
                 mContext.startActivity(intent);
             }
         });

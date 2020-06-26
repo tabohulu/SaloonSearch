@@ -9,6 +9,12 @@
 
     <include layout="@layout/custom_hitlist_layout"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="0.93">
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/activity_saloon_tab_layout"
         android:layout_width="match_parent"
@@ -26,5 +32,32 @@
         android:layout_width="match_parent"
         android:id="@+id/activity_saloon_view_pager"
         android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/color_transparent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:id="@+id/activity_saloon_details_add_to_mysaloons"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:text="Add To My Saloons"/>
+
+
+
+    </LinearLayout>
 
 </LinearLayout>

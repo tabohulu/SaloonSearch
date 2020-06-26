@@ -3,6 +3,9 @@ package com.creativediligence.saloonsearch;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,6 +26,8 @@ public class Fragment_Services extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private RecyclerView rv;
 
     public Fragment_Services() {
         // Required empty public constructor
@@ -53,12 +58,22 @@ public class Fragment_Services extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment__services, container, false);
+        View view= inflater.inflate(R.layout.fragment__services, container, false);
+        rv=view.findViewById(R.id.fragment_service_rv);
+        rv.hasFixedSize();
+        LinearLayoutManager ll = new LinearLayoutManager(getContext());
+        rv.setLayoutManager(ll);
+        rv.setItemAnimator(new DefaultItemAnimator());
+
+        AdapterRecyclerview_Services adapter=new AdapterRecyclerview_Services(getContext(),Helper_TestData.saloonServices);
+        rv.setAdapter(adapter);
+        return view;
     }
 }

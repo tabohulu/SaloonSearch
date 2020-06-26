@@ -20,7 +20,7 @@ public class FragmentPagerAdapter_SaloonDetails extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position){
             case 0:
-                return new Fragment_Blank();
+                return new Fragment_Services();
 
             case 1:
                 return new Fragment_Blank();
