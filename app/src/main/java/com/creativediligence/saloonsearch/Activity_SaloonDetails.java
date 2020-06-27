@@ -43,7 +43,7 @@ public class Activity_SaloonDetails extends AppCompatActivity {
                 saloonListIndex=saloonList.indexOf(temp);
                 isInSaloonList=true;
             }
-            Toast.makeText(this, "in list: "+isInSaloonList, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "in list: "+isInSaloonList, Toast.LENGTH_SHORT).show();
         }
         InitializeXMLElements();
 
