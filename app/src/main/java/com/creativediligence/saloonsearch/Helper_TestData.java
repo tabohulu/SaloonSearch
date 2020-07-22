@@ -21,6 +21,9 @@ public class Helper_TestData {
     static ArrayList<String> tabtitlesSaloonDetails=new ArrayList<>(Arrays.asList("Services","Calendar","Reviews"));
     static ArrayList<Integer> tabImagesHomepage =new ArrayList<>(Arrays.asList(R.drawable.ic_search_small,R.drawable.ic_appointments,R.drawable.ic_mysaloons));
     static ArrayList<String> saloonServices=new ArrayList<>(Arrays.asList("Washing","Conditioning","Natural Hair Services","ETC"));
+    static ArrayList<String > reviewerName=new ArrayList<>(Arrays.asList("User1","User2","User3","User4","User5","User6","User7","User8","User9","User10"));
+    static ArrayList<String > reviewerReviews=new ArrayList<>(Arrays.asList("Review1","Review2","Review3","Review4","Review5","Review6",
+                                                                            "Review7","Review8","Review9","Review10"));
 
 
 

@@ -26,7 +26,7 @@ public class FragmentPagerAdapter_SaloonDetails extends FragmentPagerAdapter {
                 return new Fragment_Blank();
 
             case 2:
-                return new Fragment_Blank();
+                return new Fragment_Reviews();
 
             default:
                 return new Fragment_Blank();
