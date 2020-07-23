@@ -23,7 +23,7 @@ public class FragmentPagerAdapter_SaloonDetails extends FragmentPagerAdapter {
                 return new Fragment_Services();
 
             case 1:
-                return new Fragment_Blank();
+                return new Fragment_Calendar();
 
             case 2:
                 return new Fragment_Reviews();
